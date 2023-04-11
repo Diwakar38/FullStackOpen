@@ -10,7 +10,7 @@ function Total({ parts }) {
         (sum, curr) => sum + curr.exercises, 0
     );
     console.log(ans);
-    return (<h1>Number of exercises: {ans} </h1>)
+    return (<>Number of exercises: {ans} </>)
 }
 
 const Part = ({ part }) =>
@@ -35,7 +35,7 @@ const Course = ({ course }) =>
     <div>
         <Header course={course} />
         <Content parts={course.parts} />
-        <Total sum={course.parts} />
+        <Total parts={course.parts} />
     </div>
 
 const App = () => {
