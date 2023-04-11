@@ -1,9 +1,17 @@
 const Header = ({ course }) => <h1>{course.name}</h1>
 
-const Total = part.reduce((s, p) => {
-    console.log("what is happening", s, p)
-    return <p>Number of exercises {s}</p>
-})
+// const Total = parts.reduce((s, p) => {
+//     console.log("what is happening", s, p)
+//     return <p>Number of exercises {s}</p>
+// })
+
+function Total({ parts }) {
+    const ans = parts.reduce(
+        (sum, curr) => sum + curr.exercises, 0
+    );
+    console.log(ans);
+    return (<h1>Number of exercises: {ans} </h1>)
+}
 
 const Part = ({ part }) =>
     <p>
