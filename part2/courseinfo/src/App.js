@@ -1,21 +1,11 @@
 const Header = ({ course }) => <h1>{course.name}</h1>
 
-<<<<<<< HEAD
-// const Total = parts.reduce((s, p) => {
-//     console.log("what is happening", s, p)
-//     return <p>Number of exercises {s}</p>
-// })
-
 function Total({ parts }) {
     const ans = parts.reduce(
         (sum, curr) => sum + curr.exercises, 0
     );
-    console.log(ans);
     return (<>Number of exercises: {ans} </>)
 }
-=======
-const Total = ({ sum }) => <p>Number of exercises {sum}</p>
->>>>>>> 0dcc1eaae6c13f15a337747f0a0764c0483bb7d4
 
 const Part = ({ part }) =>
     <p>
@@ -39,11 +29,7 @@ const Course = ({ course }) =>
     <div>
         <Header course={course} />
         <Content parts={course.parts} />
-<<<<<<< HEAD
         <Total parts={course.parts} />
-=======
-        <Total sum={course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises} />
->>>>>>> 0dcc1eaae6c13f15a337747f0a0764c0483bb7d4
     </div>
 
 const App = () => {
